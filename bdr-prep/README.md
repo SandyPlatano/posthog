@@ -11,6 +11,7 @@ This repository contains comprehensive learning materials to prepare for the Fou
 4. **[Company Culture](guides/04-company-culture.md)** - Understand how PostHog operates
 5. **[Product Knowledge](guides/05-product-knowledge.md)** - Deep dive into PostHog's features
 6. **[Competitive Landscape](guides/06-competitive-landscape.md)** - Know the competition
+7. **[Clay vs PostHog Comparison](guides/07-clay-posthog-comparison.md)** - Learn from Clay's non-salesy motion
 
 ## Role Overview
 

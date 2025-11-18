@@ -34,6 +34,7 @@ Why does the reverse demo work? (Varun)
 
 <img width="1600" height="900" alt="Clay&#39;s Reverse Demo" src="https://github.com/user-attachments/assets/c4e35a8d-420b-4966-a6d8-4d5a5ef1d5ce" />
 
+<br>
 
 2) **Get on texting or slack terms**
 
@@ -47,7 +48,12 @@ Slack channels, Whatsapp groups.. join communuties where Product Engineers live.
 
 4) Create content that teaches, not sells.
 
-5) 
+5) From PostHog Sales Handbook - Warm outbound to product leads: We get hundreds of ICP signups to PostHog every week, and we want to make sure we're laser focused on ensuring they have the best possible experience with PostHog by proactively reaching out to them based on certain triggers. Some people call this 'warm outbound'.
+
+- Setting up Clay to accomodate the massive amounts of signups is crucial here.
+- Questions here for myself.. how can the sales team continue to enhacnce the experience after signing up? How can sales be a helpful guide after signing up?
+
+
 
 
 ---

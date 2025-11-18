@@ -371,10 +371,174 @@ Based on both Clay and PostHog's approaches, here's the synthesized playbook:
 
 ---
 
+## Deep Dive: Mastering the Reverse Demo
+
+The reverse demo is Clay's signature technique and represents the non-salesy approach at its best. Here's everything you need to learn and apply it.
+
+### Primary Learning Resources
+
+#### 1. First Round Review - Written Article (Start Here)
+**Link:** https://review.firstround.com/the-gtm-inflection-points-that-powered-clay-to-a-1b-valuation/
+
+The article describes how the customer would share their screen, Anand would give them a Clay signup link, and then use Zoom's annotation features to guide them through which buttons to click to help solve the problem at hand.
+
+**Real Example from Varun:**
+> "I spoke to one small private equity firm in Kansas City that was trying to find plumbers in Oklahoma and Missouri that they could acquire. They wanted to scrape Google Maps for these types of businesses. To enrich the data, they wanted to know what year the plumbing business was founded, which ones were well reviewed, the owner of the company and their contact info. Over the course of 30 minutes, with me guiding them through the product, the customer was able to do it."
+
+**Why it's great:** Detailed examples with specific use cases and outcomes.
+
+---
+
+#### 2. First Round Review Podcast - "In Depth" (Audio Version)
+**Link:** https://review.firstround.com/podcast/inside-clays-unconventional-path-to-1-25b/
+
+**Spotify:** https://open.spotify.com/episode/2KW133zWWq4p8Qd8WJ862w
+
+Varun discusses how "we would have these, like, reverse demo conversations where I wouldn't traditionally demo the software."
+
+**Topics covered:**
+- WhatsApp groups and Reddit outreach
+- How reverse demos created feedback loops
+- Transitioning from sales-led to self-serve
+
+---
+
+#### 3. Notion's "First Block" Podcast (Best for Philosophy)
+**Link:** https://www.notion.com/blog/first-block-with-varun-anand
+
+**Spotify:** https://open.spotify.com/episode/2eqQAbAZdNL5DUdJJlkv6k
+
+**Timestamp:** 07:48 - Reverse Demo Strategy
+
+Varun explains how "Clay went from requiring seven demos to close a $200/month product to complete self-serve by doing eight 'reverse demos' daily where customers brought real problems to solve in twenty to twenty-five minutes."
+
+**Why it's great:** Goes deep into the mindset and philosophy behind the approach.
+
+---
+
+#### 4. Summary Article (Quick Overview)
+**Link:** https://www.antoinebuteau.com/lessons-from-varun-anand-co-founder-and-coo-of-clay/
+
+This summary explains: "Instead of a traditional demo, have the customer bring a real problem to solve during the call. 'My goal was to solve his problem in the first 20-25 minutes... I would take notes of all the little issues. And I was doing this eight times a day.' This approach led to a deep understanding of user friction and accelerated product improvements."
+
+**Why it's great:** Bullet-pointed insights you can digest in 5 minutes.
+
+---
+
+### Key Insights from Varun on Reverse Demos
+
+#### The Goal
+> "Solve the customer's stated problem within 30 minutes — and try to blow their minds in the process."
+
+#### Why It Worked
+
+**1. Customers gained confidence:**
+> "Now they were equipped to do all sorts of other things in Clay. In the beginning, we had to do probably seven demos to convince someone to pay us $200-300 a month. But eventually, we got it down to one call or even none."
+
+**2. He got a UX masterclass:**
+> "I got to see up close what was wrong with the product because I was seeing exactly where new users were going wrong and I could pass that feedback along."
+
+**3. New ideas unlocked:**
+> "Occasionally someone would have an idea for a use case that we would immediately act on that would unlock the next stepping stone."
+
+#### The Volume
+Varun was "doing this eight times a day" - he was essentially doing product research disguised as sales calls.
+
+---
+
+### Recommended Study Plan
+
+#### Day 1: Foundation
+1. Read the First Round Review article (30 min)
+2. Take notes on specific reverse demo examples
+
+#### Day 2: Deep Dive
+3. Listen to the "In Depth" podcast episode (1 hour)
+4. Focus on customer feedback loops
+
+#### Day 3: Application
+5. Listen to Notion "First Block" podcast (timestamp 07:48)
+6. Write out your own reverse demo script for PostHog
+
+#### Bonus
+- Watch/listen for how Varun talks about the **feedback loop** aspect
+- It wasn't just about closing deals - it was about learning what to build
+
+---
+
+### About Varun Anand
+
+**Background:**
+- Co-founder and Head of Operations at Clay
+- Former Director of Operations at Newfront
+- Worked on Hillary Clinton's presidential campaign for 4 years
+- Joined Clay in 2021 and earned co-founder title through GTM contributions
+
+**Speaking Style:**
+Varun is very tactical and gives specific examples (like the plumbers in Oklahoma case study). He's transparent about what worked and what didn't, making his interviews incredibly valuable for learning actual implementation details.
+
+---
+
+### Applying Reverse Demos to PostHog
+
+#### Adapting the Format
+
+PostHog's autocapture means prospects can get value faster than Clay users, but the principle still applies:
+
+**Traditional Demo:** "Let me show you our dashboards and features"
+
+**PostHog Reverse Demo:** "What are you trying to understand about your users? Share your screen - let's set it up together and answer that question in the next 20 minutes."
+
+#### Example Scenarios
+
+**Scenario 1: Conversion Problem**
+> Prospect: "We're losing users in our signup flow"
+> You: "Share your screen. Let's set up a funnel right now and see exactly where they're dropping off. Then we'll watch a few session replays to see why."
+
+**Scenario 2: Feature Adoption**
+> Prospect: "We launched a new feature but don't know if anyone uses it"
+> You: "Let's create a custom event for that feature and a trend insight. I'll walk you through it - you'll have the answer before we hang up."
+
+**Scenario 3: A/B Testing**
+> Prospect: "We want to test a new pricing page"
+> You: "Let's set up that experiment together right now. I'll show you how to create the feature flag and connect it to your conversion goal."
+
+#### The Feedback Loop Benefit
+
+Like Varun, you'll gain:
+- Deep understanding of what confuses users
+- Real use cases to inform product feedback
+- Content ideas from common problems
+- Trust from genuine helpfulness
+
+---
+
+### For Your PostHog Interview
+
+When they ask "How would you approach this role?", you can say:
+
+> "I studied how Varun Anand at Clay built their early GTM motion through reverse demos - where instead of showing product features, you solve the customer's actual problem in 30 minutes using your product. I've been practicing this approach with PostHog.
+>
+> For example, [share a specific example of a reverse demo you've practiced].
+>
+> Varun was doing 8 of these per day, which gave Clay incredible product feedback while building customer confidence. I think this approach would work perfectly for PostHog since engineers want to see if it actually solves their problem, not just hear about features.
+>
+> The key insight is that this isn't really sales - it's solving problems and creating value. That's exactly what PostHog's handbook describes when they say they want to make paying customers successful, not force sales through."
+
+**This shows you:**
+- Study successful GTM strategies
+- Understand PLG best practices
+- Have actually practiced the approach
+- Can connect Clay's lessons to PostHog's context
+- Understand PostHog's philosophy
+
+---
+
 ## Action Items for Your Preparation
 
 ### Immediate
-- [ ] Watch Clay's content on GTM engineering and reverse demos
+- [ ] Read First Round Review article on Clay's GTM inflection points
+- [ ] Listen to at least one Varun Anand podcast episode
 - [ ] Practice "solving problems live" with PostHog
 - [ ] Build your own demo environment where you can help prospects
 
@@ -382,11 +546,13 @@ Based on both Clay and PostHog's approaches, here's the synthesized playbook:
 - [ ] Study how Clay engages in their Slack community
 - [ ] Identify where PostHog's ICP congregates (GitHub, HN, etc.)
 - [ ] Practice explaining PostHog without feature-dumping
+- [ ] Write your own reverse demo scripts for 3 common use cases
 
 ### Ongoing
 - [ ] Document your experiments and learnings
 - [ ] Share insights (internal and potentially external)
 - [ ] Build reputation as problem-solver, not salesperson
+- [ ] Practice reverse demos with friends or practice prospects
 
 ---
 

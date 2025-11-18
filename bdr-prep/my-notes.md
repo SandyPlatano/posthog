@@ -218,32 +218,39 @@ _Things to research further or ask in the interview_
 
 Pitch 1: Simple Version (For my partner Morgan)
 
-You know how when you run a store, you want to understand your customers? Like, which products do they look at? Where do they get confused and leave? What makes them actually buy something?
+Have you ever walked into a busy store looking for one specific thing - maybe a birthday card or a phone charger - and you just couldn't find it? You walked around, got frustrated, and eventually just left without buying anything.
 
-PostHog does that for websites and apps.
+Now imagine you're the store owner. You have no idea that just happened. You don't know that 20 people today walked in wanting to buy something but left empty-handed because they couldn't find it. You can't fix a problem you don't know exists.
 
-When someone builds an app - like a banking app or a shopping app - they need to understand how people actually use it. Are people getting stuck? Are they finding the features they need? Are they leaving before they sign up?
+That's exactly what happens with apps and websites - but it's even worse.
 
-PostHog shows you exactly what's happening.
+When someone downloads your banking app or visits your online store, you can't see them getting confused. You can't see them tapping the wrong button five times. You can't see them give up right before signing up because the page was too slow or confusing.
 
-Think of it like security cameras for your app, but instead of watching for theft, you're watching to see where customers get confused or frustrated. You can literally replay what someone did - where they clicked, where they got stuck, where they gave up.
+PostHog lets you see all of that.
 
-But here's what makes PostHog special:
+It's like having a way to watch a replay of every customer's experience in your store - where they went, what they looked at, where they got stuck, and why they left. Except it's for apps and websites.
 
-First, most companies need to buy 4 or 5 different tools to do all this. One tool to see the numbers, another to watch recordings, another to test different versions of their website. PostHog does all of it in one place. That's simpler and cheaper.
+Let me give you a real example:
 
-Second, PostHog is built for the engineers who actually build these apps. Most of these tools are built for marketing people, so engineers hate using them. PostHog is built the way engineers think, so they actually enjoy using it.
+Say you run an app and notice that half of people who start signing up never finish. That's a huge problem - but why is it happening? With PostHog, you can literally watch recordings of what those people did. Maybe they all got stuck on the same confusing screen. Maybe the "Next" button was hard to find. Once you see it, you can fix it - and suddenly twice as many people are signing up.
 
-Third, the code is open - anyone can see exactly how it works. That builds trust because there are no secrets about what it's doing with your data.
+Here's what makes PostHog different:
 
-Why does this matter for businesses?
+One: Most companies need to buy 4 or 5 different tools for this. One to see the numbers, one to watch recordings, one to test different versions. PostHog does all of it in one place. Simpler and cheaper.
 
-If you're losing 50% of people during signup, and you can see exactly why and fix it, that could double your customers. If you're testing whether a blue button or green button gets more clicks, you can make decisions based on real data instead of guessing.
+Two: It's built for the engineers who actually create these apps. Most tools like this are built for marketing people, so the engineers who need to use them hate them. PostHog is built the way engineers think, so they actually use it.
 
-Companies like Airbnb and Spotify use tools like this to make their products better. PostHog is the version built specifically for the technical teams who build the product.
+Three: It's open - anyone can look at the code and see exactly what it does. No secrets. That matters when you're trusting a tool with your customer data.
 
-The bottom line: PostHog helps companies understand how people use their apps so they can make them better. And they do it in a way that engineers actually like, which means it actually gets used.
+Why should businesses care?
 
+Think about it this way: if 100 people visit your website and only 2 buy something, that's pretty normal. But if you could figure out why the other 98 left and fix even some of those problems, you could double or triple your sales without spending more on advertising.
+
+PostHog shows you exactly where people are "walking out of your store" - and why - so you can actually do something about it.
+
+The bottom line: You know that frustrating experience of not finding what you need in a store and just leaving? PostHog helps companies see when that's happening in their apps, so they can fix it. And they built it specifically for the technical people who can actually make those fixes.
+
+NOTES: Clean up beginning and end of pitch to be more impactful. 
 ---
 
 **Pitch 2: Technical Pitch **

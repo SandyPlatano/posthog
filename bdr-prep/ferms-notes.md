@@ -299,6 +299,22 @@ Product engineers at Series B+ startups who want to move fast, ship safely with 
 
 Bottom line: It's the analytics platform engineers would build for themselves - because it was. And it actually replaces your whole stack, not just one piece of it.
 
+---
+
+Quicker pitch using secret shopper as core analogy (45s):
+
+Think about how grocery stores transformed over the decades. They went from simply stocking shelves to obsessing over customer experience—using secret shoppers, receipt surveys, and store layout optimization to understand why customers leave without buying.
+
+Now, every business has a digital storefront. But you can't send a secret shopper to your website. You can't watch someone abandon their cart and ask them why.
+
+That's where PostHog comes in.
+
+PostHog is like having a secret shopper for every single visitor to your site. You can see exactly where customers get stuck, what makes them hesitate, and why they don't complete that final purchase. Session recordings show you the "why" behind the data. Analytics tell you what's working and what isn't. And you can test improvements instantly with feature flags.
+
+Grocery stores revolutionized retail by understanding their customers. PostHog lets you do the same thing—for your digital storefront.
+
+---
+
 
 ## Random Ideas & Thoughts
 

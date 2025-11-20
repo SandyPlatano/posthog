@@ -135,6 +135,22 @@ _Key differentiators, common objections, when they win_
 
 ## ICP Practice
 
+## Learning about Product Engineer's
+
+PE's are software engineers that are full-stack but typically more frontend focused. They are customer obssessed, data-driven & autonomous (ship without gatekeepers).
+
+They interact with customers to deeply understand problems.
+
+Consiladating tools is one primary reason PostHog wins.. how does this help PE's?
+- Reduce data silos.
+- More tools = more expensive. 
+
+Like most folks in SaaS, they are using 10+ tools.. GitHub, IDE, Slack --> more context switching means getting less done.
+
+Engineers evluate tools by actually using the tool. "Technical evaluation matters more than sales pitch" <---- REALLY IMPORTANT. Get rid of the sales BS talk. 
+
+
+
 ### Company Analysis Examples
 _Practice qualifying companies using PostHog's ICP criteria_
 
@@ -315,7 +331,11 @@ Grocery stores revolutionized retail by understanding their customers. PostHog l
 
 ## Random Ideas & Thoughts
 
-_Capture anything that comes to mind_
+Implemeenting PostHog
+
+Really cool.. with LLM analytics you can tracks your app's server-side LLM usage (cost, performance, model usage). For instnace if you have a AI generate summary button, you can track the event of a button clicked.. and the LLM usuaage of that AI action, then use that data to make better decisions. 
+
+
 
 
 

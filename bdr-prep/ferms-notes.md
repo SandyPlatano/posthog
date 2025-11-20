@@ -65,9 +65,6 @@ Slack channels, Whatsapp groups.. join communuties where Product Engineers live.
 - [ ] PostHog Handbook - How We Work
 - [ ] PostHog Handbook - Culture
 - [ ] PostHog Handbook - Values
-- [ ] First Round Review - Clay GTM Article
-- [ ] Varun Anand Podcast (First Round)
-- [ ] Varun Anand Podcast (Notion First Block)
 - [ ] PostHog Documentation - Product Analytics
 - [ ] PostHog Documentation - Feature Flags
 - [ ] PostHog Documentation - Session Replay

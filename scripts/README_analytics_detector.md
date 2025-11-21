@@ -144,19 +144,48 @@ https://www.wix.com
 
 ### Bot Protection (403 Errors)
 
-Many large websites use bot protection (Cloudflare, etc.) that blocks automated requests:
+**IMPORTANT:** Many websites use bot protection (Cloudflare, Akamai, etc.) that blocks automated requests. You'll see:
 
 ```
-ERROR: Failed to fetch https://example.com: 403 Client Error: Forbidden
+✗ Blocked (403 - bot protection)
 ```
+
+This is the **most common limitation** of this tool. In the CSV output, blocked sites will show:
+```csv
+company,url,analytics_tools
+Stripe,https://stripe.com,BLOCKED
+```
+
+**Why this happens:**
+- Websites detect automated/datacenter traffic
+- Cloudflare and similar services block non-browser requests
+- Large companies have stricter bot protection
+- Some sites require JavaScript rendering
 
 **Workarounds:**
-1. **Try smaller/tech-forward companies** - They're less likely to have aggressive bot protection
-2. **Manual checking** - For blocked sites, you can:
-   - Open the website in your browser
-   - View page source (Ctrl+U / Cmd+U)
-   - Search for analytics script patterns (mixpanel, amplitude, etc.)
-3. **Use browser automation** - For advanced users, consider Selenium or Playwright (not included in this script)
+
+1. **Run locally on your machine** - Better success rate than cloud/datacenter IPs:
+   ```bash
+   # Download the script and run on your laptop
+   python3 detect_competitor_analytics.py companies.csv results.csv
+   ```
+
+2. **Manual verification** - For blocked sites:
+   - Open website in browser
+   - Press Ctrl+U (Windows/Linux) or Cmd+Option+U (Mac)
+   - Search for: "mixpanel", "amplitude", "segment", "heap", etc.
+   - Check Network tab in DevTools for analytics requests
+
+3. **Try smaller companies first** - Startups/smaller tech companies usually have less aggressive bot protection
+
+4. **Use browser automation** (Advanced):
+   - Install Selenium or Playwright
+   - Requires modifications to this script
+   - Slower but more reliable
+
+5. **Use a proxy service** - Route requests through residential IPs (costs money)
+
+**Best strategy:** Use this script for bulk checking, then manually verify important/blocked sites in your browser.
 
 ### Timeout Errors
 

@@ -13,13 +13,15 @@ import csv
 import sys
 import re
 import time
-from typing import List, Dict, Set
+import random
+from typing import List, Dict, Set, Optional
 from urllib.parse import urlparse
 import requests
 from requests.exceptions import RequestException, Timeout
 
 # Timeout for HTTP requests (seconds)
-REQUEST_TIMEOUT = 10
+REQUEST_TIMEOUT = 15
+MAX_RETRIES = 3
 
 # PostHog competitors and their detection patterns
 COMPETITORS = {
@@ -91,6 +93,15 @@ COMPETITORS = {
     ],
 }
 
+# Rotate through different user agents to avoid detection
+USER_AGENTS = [
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0',
+    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+]
+
 
 def normalize_url(company_input: str) -> str:
     """Convert company name or URL to a full URL."""
@@ -109,30 +120,75 @@ def normalize_url(company_input: str) -> str:
     return f'https://{company_name}.com'
 
 
-def fetch_html(url: str) -> str:
-    """Fetch HTML content from a URL."""
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.5',
-        'Accept-Encoding': 'gzip, deflate, br',
-        'DNT': '1',
-        'Connection': 'keep-alive',
-        'Upgrade-Insecure-Requests': '1',
-        'Sec-Fetch-Dest': 'document',
-        'Sec-Fetch-Mode': 'navigate',
-        'Sec-Fetch-Site': 'none',
-        'Cache-Control': 'max-age=0',
-    }
+def get_alternative_urls(url: str) -> List[str]:
+    """Generate alternative URLs to try (with and without www)."""
+    urls = [url]
 
+    # Try with/without www
+    if '://www.' in url:
+        urls.append(url.replace('://www.', '://'))
+    elif '://' in url:
+        urls.append(url.replace('://', '://www.'))
+
+    return urls
+
+
+def fetch_html(url: str) -> str:
+    """Fetch HTML content from a URL with retry logic."""
     session = requests.Session()
 
-    try:
-        response = session.get(url, headers=headers, timeout=REQUEST_TIMEOUT, allow_redirects=True)
-        response.raise_for_status()
-        return response.text
-    except RequestException as e:
-        raise Exception(f"Failed to fetch {url}: {str(e)}")
+    # Try alternative URLs (with/without www)
+    urls_to_try = get_alternative_urls(url)
+
+    for attempt_url in urls_to_try:
+        for retry in range(MAX_RETRIES):
+            try:
+                # Rotate user agent
+                user_agent = random.choice(USER_AGENTS)
+
+                headers = {
+                    'User-Agent': user_agent,
+                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                    'Accept-Language': 'en-US,en;q=0.9',
+                    'Accept-Encoding': 'gzip, deflate, br',
+                    'Connection': 'keep-alive',
+                    'Upgrade-Insecure-Requests': '1',
+                    'Cache-Control': 'no-cache',
+                }
+
+                response = session.get(
+                    attempt_url,
+                    headers=headers,
+                    timeout=REQUEST_TIMEOUT,
+                    allow_redirects=True,
+                    verify=True
+                )
+                response.raise_for_status()
+                return response.text
+
+            except requests.exceptions.HTTPError as e:
+                # If 403/401, don't retry - likely bot protection
+                if response.status_code in [403, 401]:
+                    if attempt_url == urls_to_try[-1]:  # Last URL to try
+                        raise Exception("BLOCKED")
+                    else:
+                        break  # Try next URL variant
+                # For other HTTP errors, retry
+                if retry == MAX_RETRIES - 1:
+                    raise Exception(f"HTTP {response.status_code}")
+                time.sleep(1 * (retry + 1))  # Exponential backoff
+
+            except requests.exceptions.Timeout:
+                if retry == MAX_RETRIES - 1:
+                    raise Exception("TIMEOUT")
+                time.sleep(1 * (retry + 1))
+
+            except RequestException as e:
+                if retry == MAX_RETRIES - 1:
+                    raise Exception(f"CONNECTION_ERROR")
+                time.sleep(1 * (retry + 1))
+
+    raise Exception("BLOCKED")
 
 
 def detect_analytics_tools(html: str) -> Set[str]:
@@ -201,7 +257,7 @@ def process_companies(input_csv: str, output_csv: str):
                 tools_str = ', '.join(sorted(detected))
                 print(f"  ✓ Found: {tools_str}")
             else:
-                tools_str = ''
+                tools_str = 'None detected'
                 print(f"  - No known analytics tools detected")
 
             results.append({
@@ -211,15 +267,33 @@ def process_companies(input_csv: str, output_csv: str):
             })
 
         except Exception as e:
-            print(f"  ✗ Error: {e}")
+            error_msg = str(e)
+
+            # Simplify error messages for CSV
+            if error_msg == "BLOCKED":
+                csv_error = "BLOCKED"
+                print(f"  ✗ Blocked (403 - bot protection)")
+            elif error_msg == "TIMEOUT":
+                csv_error = "TIMEOUT"
+                print(f"  ✗ Timeout")
+            elif error_msg == "CONNECTION_ERROR":
+                csv_error = "CONNECTION_ERROR"
+                print(f"  ✗ Connection error")
+            elif error_msg.startswith("HTTP"):
+                csv_error = error_msg
+                print(f"  ✗ {error_msg}")
+            else:
+                csv_error = "ERROR"
+                print(f"  ✗ Error: {error_msg}")
+
             results.append({
                 'company': company_input,
                 'url': url,
-                'analytics_tools': f'ERROR: {str(e)}'
+                'analytics_tools': csv_error
             })
 
-        # Be nice to servers
-        time.sleep(0.5)
+        # Be nice to servers - random delay
+        time.sleep(random.uniform(0.5, 1.5))
 
     # Write results to CSV
     try:
@@ -233,16 +307,46 @@ def process_companies(input_csv: str, output_csv: str):
 
         # Summary statistics
         tools_count = {}
+        error_count = {'BLOCKED': 0, 'TIMEOUT': 0, 'CONNECTION_ERROR': 0, 'OTHER': 0}
+        success_count = 0
+
         for result in results:
             tools = result['analytics_tools']
-            if tools and not tools.startswith('ERROR'):
+
+            # Track errors
+            if tools in ['BLOCKED', 'TIMEOUT', 'CONNECTION_ERROR']:
+                error_count[tools] += 1
+            elif tools.startswith('HTTP') or tools == 'ERROR':
+                error_count['OTHER'] += 1
+            elif tools != 'None detected':
+                # Count detected tools
+                success_count += 1
                 for tool in tools.split(', '):
                     tools_count[tool] = tools_count.get(tool, 0) + 1
 
+        print("\n" + "="*50)
+        print("SUMMARY")
+        print("="*50)
+
         if tools_count:
-            print("\nSummary:")
+            print("\nDetected Analytics Tools:")
             for tool, count in sorted(tools_count.items(), key=lambda x: x[1], reverse=True):
                 print(f"  {tool}: {count} companies")
+
+        # Show error summary
+        total_errors = sum(error_count.values())
+        if total_errors > 0:
+            print(f"\nErrors:")
+            if error_count['BLOCKED'] > 0:
+                print(f"  Bot protection (403): {error_count['BLOCKED']} sites")
+            if error_count['TIMEOUT'] > 0:
+                print(f"  Timeouts: {error_count['TIMEOUT']} sites")
+            if error_count['CONNECTION_ERROR'] > 0:
+                print(f"  Connection errors: {error_count['CONNECTION_ERROR']} sites")
+            if error_count['OTHER'] > 0:
+                print(f"  Other errors: {error_count['OTHER']} sites")
+
+        print(f"\nTotal: {success_count} successful, {total_errors} errors out of {len(results)} sites")
 
     except Exception as e:
         print(f"Error writing output CSV: {e}")

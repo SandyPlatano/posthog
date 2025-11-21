@@ -1,0 +1,4 @@
+company,url,analytics_tools
+posthog.com,https://posthog.com,ERROR: Failed to fetch https://posthog.com: 403 Client Error: Forbidden for url: https://posthog.com/
+github.com,https://github.com,
+vercel.com,https://vercel.com,ERROR: Failed to fetch https://vercel.com: 403 Client Error: Forbidden for url: https://vercel.com/

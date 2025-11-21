@@ -1,6 +1,10 @@
 # PostHog Founding BDR Preparation Guide
 
+Welcome to Ferm's interviewing journey with PostHog!
+
 This repository contains comprehensive learning materials to prepare for the Founding BDR role at PostHog. The goal is to equip you with the knowledge to be a technical, self-sufficient sales professional who understands both the product and the company culture.
+
+**Questions or advice?** Reach out at andujar609@gmail.com
 
 ## Quick Navigation
 

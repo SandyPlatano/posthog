@@ -4,11 +4,85 @@ Use this file to capture your learnings, insights, and preparation progress.
 
 ---
 
+TODO:
+- Understand what autocapture does vs custom events
+- Can explain feature flags and experiments to an engineer
+- Know when to use server-side vs client-side SDKs
+- Understand the data pipeline and how events flow
+
+
 ## Key Insights & Observations
 
-### PostHog Philosophy
-_What resonates with you about their approach?_
+**Why buy PostHog?**
 
+By integrating PostHog into your app, you’ll be able to track and diagnose errors, roll out and test new features and gain a better understanding of your users. Getting all of these capabilities through one SDK means you reduce the overhead of maintaining your app and can focus on shipping your product.
+
+For Prodcut Engineers this means:
+
+- Auto Error tracking: session replay + product analytics
+- Target new features: Target a specific segment/cohort and see how they experience features.
+- A/b test new features: see if the new experience is better than the old.
+- Debug: see how users consume AI, you can monitor performance, costs, latency and see how diff models perform
+
+**Main talking points:**
+1) All products in one place.. don't have to pay for more tools, reduce data silos, and context switching.
+2) They build the things people actually need, not what the sales teams asks for.
+3) Usage based pricing -- clear pricing model.
+4) Do sales differently!
+
+[Handbook (Outbound sales) ]([url](https://posthog.com/handbook/growth/sales/outbound-sales))
+
+- They need to get really good at outbound as inbound dries up.
+
+**What is considered outbound?**
+
+Person signed up, but not really using, usually just kicking the tires
+Person had signed up or used PostHog previously, has moved on to a new job which is not using PostHog
+Not signed up, but has heard of PostHog
+Not signed up, never heard of PostHog
+
+Examples of good outreach:
+
+Hello [name], It looks like your Product Analytics usage has increased over the past month and I wanted to ensure that the increase was expected. 
+
+Here are some tools you can use to ensure you are collecting the correct events and getting valuable insights from them. 
+
+We have a whole host of tutorials and guides to help you get the most out of PostHog. If you have any questions, don't hesitate to ask.
+
+PVP would be a really good example of how to do outreach. 
+
+.. do a little digging on a good PVP for PostHog.
+
+**Use cases**
+
+Understanding user behavior → Product Analytics
+Debugging conversion drops → Funnels + Session Replay
+Safe feature releases → Feature Flags
+Testing hypotheses → Experiments
+Collecting feedback → Surveys
+Privacy/compliance → Self-hosting
+
+### PostHog Philosophy
+
+
+
+Really like that they don't want you to execute your previous company's playbook. They're trying to do things differently from 90% of the industry. If you come in with traditional BDR tactics, you'll fail.
+
+
+
+
+
+
+
+### [ICP Scoring Handbook immprovements]([url](https://posthog.com/handbook/growth/marketing/icp))
+
+Currently using Clearbit for their scoring model, which is a score out of 24. Think there's room for improvement as this only contains mainly firmographic data like company type, country, revenue, etc. 
+
+From an outbound perspective, having a pain based model included into this current model can help find companies that are actively experiencing problems PostHog solves. Other things such as technographics can be included. Based on first party data, PostHog might consistently win over other specific competitors which would be weigfhted differently on the scoring model. 
+
+Using Clay, you can scale sourcing these unique data points that are relevant to PostHog and impact which company would be the absolute best fit based on many other data points beyond firmographic data.
+
+One thing I found interesting is they score companies above 500 employees lower due to slower deals. 
 
 
 

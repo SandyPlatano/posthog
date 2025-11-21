@@ -12,6 +12,8 @@ This repository contains comprehensive learning materials to prepare for the Fou
 5. **[Product Knowledge](guides/05-product-knowledge.md)** - Deep dive into PostHog's features
 6. **[Competitive Landscape](guides/06-competitive-landscape.md)** - Know the competition
 7. **[Clay vs PostHog Comparison](guides/07-clay-posthog-comparison.md)** - Learn from Clay's non-salesy motion
+8. **[Product Engineer ICP Deep-Dive](guides/08-product-engineer-icp-deep-dive.md)** - Understanding the target persona
+9. **[Customer Case Studies](guides/09-customer-case-studies.md)** - Real success stories with key metrics
 
 ## Role Overview
 

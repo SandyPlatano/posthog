@@ -1,0 +1,6 @@
+company,url,analytics_tools
+Stripe,https://stripe.com,ERROR: Failed to fetch https://stripe.com: 403 Client Error: Forbidden for url: https://stripe.com/
+Airbnb,https://airbnb.com,ERROR: Failed to fetch https://airbnb.com: 403 Client Error: Forbidden for url: https://airbnb.com/
+Netflix,https://netflix.com,ERROR: Failed to fetch https://netflix.com: 403 Client Error: Forbidden for url: https://netflix.com/
+Shopify,https://shopify.com,ERROR: Failed to fetch https://shopify.com: 403 Client Error: Forbidden for url: https://shopify.com/
+Mixpanel,https://mixpanel.com,ERROR: Failed to fetch https://mixpanel.com: 403 Client Error: Forbidden for url: https://mixpanel.com/

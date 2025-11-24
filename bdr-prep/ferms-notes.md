@@ -45,6 +45,9 @@ Data sourcing for personalizaiton --> Scripts on cursor or Clay
 Indentify prospects --> Apollo, Clay, BuiltWith, Apify scraper, Rb2B, Ocean.io, Cursor
 Inbox infracture --> Scaled Mail
 
+Choosing a tool that is going to solve a certain problem is how I'd choose the tech stack. 
+
+
 This is what the process typically looks like
 
 Source data → qualification → research   → personalized outreach. 
@@ -52,9 +55,28 @@ Source data → qualification → research   → personalized outreach.
 Source data where potential customers live .. 
 
 
-
 - Reverse demo's are a great way to put the customer in the drivers seat and let them feel what it would be like to drive your product.
-- 
+- When an ICP fit Engineer signsup, offer them to get on texting terms and offer help whenever possible. Give them tactical, and guides to follow based on their specifci industry. You can use Clay for this. Setup webhook from signup page, identify ICP, push specific non salesy messaging through the program Outreach which is a sequencer. Allows people to feel like they can reach directly to someone to help them.
+
+In terms of messaging tone: Unassumptive tones! Every one hates having a stranger contact them about their life and make the assumption they know these are facts within your outreach messaging. Terms like "Not sure" "Possibly" "Is this?" .. When you're reaching out to someone you're basing it on 3rd party data, you don't have access to their 1st party data so its always an educated guess. 
+
+ICP/Verticals (PostHog-specific):
+B2B-SaaS → B2B SaaS companies (your primary ICP)
+DevTools → Developer tools & infrastructure
+FinTech → Financial technology (compliance/self-hosting interest)
+AI/ML → AI & ML products (LLM tracking needs)
+Marketplace → Two-sided platforms
+HealthTech → Healthcare tech (HIPAA/compliance)
+PropTech → Property & real estate tech
+Purpose (PostHog-specific plays):
+Cold → General cold outreach
+Warm → Following up on signups/engaged leads
+Expansion → Existing customer growth
+Consolidation → Tool consolidation messaging (key differentiator!)
+Comp-Amp/Mix/LD/Heap → Competitive displacement plays
+Ent-Play → Enterprise ABM campaigns
+Trigger → Event-based (funding, hires, launches)
+Re-Engage → Churned/dormant users
 -----
 
 

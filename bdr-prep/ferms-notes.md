@@ -2,13 +2,66 @@
 
 Presentation idea for creative sales ideas = create a super simple PostHog game where the Hog is presenting the concepts, instead of a plain / boring slide deck. 
 
+What's in the presentation?
 
+What I heard was really important for this role:
+
+- Not ruining brand image with sleezy sales tactcis while building piepline.
+- 
+
+Also instead of calling them prospects, you can call them potential customers is another idea I had as well. 
+
+With such great brand reputation, PostHog's name doesn't have to overcome the skepticism barrier — people already know the brand, so outreach feels less cold.
+
+But with such great brand indentity, comes great brand protection..
+
+sleezy sales tactics are one of the quickest ways to ruin it. 
+
+examples:
+
+- Gatekeeping price
+- Not doing demo's when thats what the customner wanted
+- Promising features.
+
+Coming opinionated about the right tooling and process for the job.
+ So my opinions are that educating and creating resource and value before we even contact a customer is going to be a critical point here. A lot of sales is all about extracting and that's what feels sleazy sometimes is that you're contacting a total stranger and trying to extract. I think a better idea for outreach is trying to provide value without anything or without expecting anything in return. It's more like, hey, I thought this might be good for you and relevant. Here's what I made. If you have any questions for me to send them my way, just thought it would be helpful. It's more of that mindset that you want to approach. There might be a time where you're asking someone for time and that's okay if people want to meet. And of course, with a little bit of polite persistence, things people do forget to answer back or maybe their priorities shifted for just a moment and you need to reach out another time.
+
+ The main goal is to reach out to potential customers and try to show them how awesome PostHog is. 
+
+ 
+
+ So what does this look like in practice?
+
+ For your first intiative of...
+
+"Research and identify high-quality target accounts using firmographic, technographic, and behavioral signals. Do this in a way that doesn't scale, and then does."
+
+Lets get the tools out of the way:
+
+
+
+Sequencer --> Outreach or Instantly.. Lemlist for LI outreach
+Data sourcing for personalizaiton --> Scripts on cursor or Clay
+Indentify prospects --> Apollo, Clay, BuiltWith, Apify scraper, Rb2B, Ocean.io, Cursor
+Inbox infracture --> Scaled Mail
+
+This is what the process typically looks like
+
+Source data → qualification → research   → personalized outreach. 
+
+Source data where potential customers live .. 
+
+
+
+- Reverse demo's are a great way to put the customer in the drivers seat and let them feel what it would be like to drive your product.
+- 
+-----
 
 
 
 Use this file to capture your learnings, insights, and preparation progress.
 
-One thing I foundq really interesting is that when you publicly announce everything you're doing publicly, it really puts this positiver pressue to product something better. No gatekeeping information, no doing shady stuff.. it provides accountability. 
+One thing I found really interesting is that when you publicly announce everything you're doing publicly, it really puts this positiver pressue to product something better. No gatekeeping information, no doing shady stuff.. it provides accountability. 
 
 The reason I say that is because while doing this execise publicly on LinkedIn, I noticed you have to be a lot more honest about the work you do. 
 

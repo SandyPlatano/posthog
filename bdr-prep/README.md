@@ -16,6 +16,7 @@ Welcome to Ferm's interviewing journey with PostHog!
 7. **[Clay vs PostHog Comparison](guides/07-clay-posthog-comparison.md)** - Learn from Clay's non-salesy motion
 8. **[Product Engineer ICP Deep-Dive](guides/08-product-engineer-icp-deep-dive.md)** - Understanding the target persona
 9. **[Customer Case Studies](guides/09-customer-case-studies.md)** - Real success stories with key metrics
+10. **[Campaign Creation Framework](guides/10-campaign-creation-framework.md)** - PostHog-specific campaign naming and strategy
 
 ## Role Overview
 
@@ -70,7 +71,7 @@ The sales team focuses on customers who are paying or could pay **$20k+/year**. 
 - Prepare technical demos for common use cases
 
 ### Week 4: Interview Preparation
-- Mock outbound campaigns to PostHog's ICP
+- Mock outbound campaigns to PostHog's ICP using the campaign framework
 - Prepare for technical questions about implementation
 - Understand competitive differentiation cold
 

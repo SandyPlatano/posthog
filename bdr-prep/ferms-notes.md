@@ -1,5 +1,7 @@
 # My PostHog BDR Preparation Notes
 
+Loose mental notes:
+
 Presentation idea for creative sales ideas = create a super simple PostHog game where the Hog is presenting the concepts, instead of a plain / boring slide deck. 
 
 What's in the presentation?
@@ -60,23 +62,70 @@ Source data where potential customers live ..
 
 In terms of messaging tone: Unassumptive tones! Every one hates having a stranger contact them about their life and make the assumption they know these are facts within your outreach messaging. Terms like "Not sure" "Possibly" "Is this?" .. When you're reaching out to someone you're basing it on 3rd party data, you don't have access to their 1st party data so its always an educated guess. 
 
-ICP/Verticals (PostHog-specific):
-B2B-SaaS → B2B SaaS companies (your primary ICP)
-DevTools → Developer tools & infrastructure
-FinTech → Financial technology (compliance/self-hosting interest)
-AI/ML → AI & ML products (LLM tracking needs)
-Marketplace → Two-sided platforms
-HealthTech → Healthcare tech (HIPAA/compliance)
-PropTech → Property & real estate tech
-Purpose (PostHog-specific plays):
+Creating campaigns
+
+Tag based campaigns 
+
+
 Cold → General cold outreach
-Warm → Following up on signups/engaged leads
-Expansion → Existing customer growth
-Consolidation → Tool consolidation messaging (key differentiator!)
-Comp-Amp/Mix/LD/Heap → Competitive displacement plays
-Ent-Play → Enterprise ABM campaigns
-Trigger → Event-based (funding, hires, launches)
-Re-Engage → Churned/dormant users
+Warm → Following up on signups
+Consolidation → Tool consolidation
+
+Example Campaigns:
+B2B-SaaS - Cold - Q1-2025 → Tool consolidation messaging
+
+I'd use the SPAM frame work to create messaging that is targeteed.
+
+The SPAM Framework for PostHog
+1. Segment
+This is where you group prospects based on their existing analytics tool stack, which indicates a specific set of operational challenges.
+
+Segment A: Multi-tool Analytics Users (e.g., Mixpanel + LaunchDarkly + FullStory)
+
+Implied Pain: Managing multiple vendors for analytics, feature flags, and session replay. Data scattered across platforms, integration nightmares, and ballooning costs.
+Segment B: Legacy Analytics Users (e.g., Google Analytics + Firebase + Optimizely)
+
+
+2. Persona (Who You're Talking To)
+Within each segment, you must tailor your message to the specific individual you're contacting, as their priorities differ.
+
+Head of Product: Cares about user insights, understanding the "why" behind user behavior, speed to insight, and making data-driven product decisions.
+
+VP of Engineering/CTO: Cares about technical implementation complexity, performance impact, data security, infrastructure costs, and developer productivity.
+
+3. Angle (Your Argument or Hypothesis)
+The angle is the specific pain point or opportunity you're highlighting. Before writing a single word of copy, you should test several high-level angles to see what resonates.
+
+Angle A: Tool Consolidation ("Replace 3-5 tools with one platform.")
+
+Angle B: Cost Optimization ("Cut your analytics spend by 60% without losing features.")
+
+Angle C: Privacy & Data Ownership ("Your data stays on your infrastructure. Full GDPR compliance by default.")
+
+
+4. Message (The Actual Words)
+The message is the tactical execution of your chosen Segment, Persona, and Angle. This is where you test different ways of articulating a specific pain point.
+
+Example: Targeting Head of Product (Persona) using Mixpanel + LaunchDarkly + FullStory (Segment)
+
+
+Research and identify high-quality target accounts .. pain based segmenting by doing reesearch at scale with Clay and help expand your current ICP Scoring Model to include segmentation based on certain data points such as tech stack their using, recent funding, if they are hiring a Product Engineer -- these data points allow us to see who would potentially be a better fit for us based on pain they are experiencing that PostHog could potentailly solve. . 
+
+This prodcut engineers hate from sales pepole which is what i'll try not to do:
+
+- Overpromising or bullshitting
+- Trying to "handle" objections, if they don't want to talk to me on the phone.. its ok, just ask if you can send them an email.
+
+What I'll do instead:
+
+- Honest conversations about tradeoffs
+- Acknowledging when you're not a fit ..
+
+This is my plan for outbound at PostHog, still needs and will always need polishing and revising as its a living document. The goal is to ship experiments without being a sleezy sales person and making it fun to interact with a salesperson thats not trying to slam the sale down their throats. 
+
+Tools will change, messaging, tactics, but the core values of how those are produced will alwyas keep the best interest of the PC. 
+
+
 -----
 
 

@@ -1,6 +1,19 @@
 # My PostHog BDR Preparation Notes
 
+Presentation idea for creative sales ideas = create a super simple PostHog game where the Hog is presenting the concepts, instead of a plain / boring slide deck. 
+
+
+
+
+
 Use this file to capture your learnings, insights, and preparation progress.
+
+One thing I foundq really interesting is that when you publicly announce everything you're doing publicly, it really puts this positiver pressue to product something better. No gatekeeping information, no doing shady stuff.. it provides accountability. 
+
+The reason I say that is because while doing this execise publicly on LinkedIn, I noticed you have to be a lot more honest about the work you do. 
+
+I appreciate this sensation a lot because it forces you to not skip corners when building something. 
+
 
 ---
 
@@ -10,12 +23,23 @@ TODO:
 - Know when to use server-side vs client-side SDKs
 - Understand the data pipeline and how events flow
 
+Case Study: Webshare
+Proxy and web scraping services
 
+Use Case: Consolidated analytics + experimentation platform
+Result: 26% conversion improvement from "Buy Now" CTA experiment
+
+Case Study: Juicebox
+AI application
+
+Use Case: User experience research
+How: Watches session replays to identify confusion points
 ## Key Insights & Observations
 
 **Why buy PostHog?**
 
-By integrating PostHog into your app, you’ll be able to track and diagnose errors, roll out and test new features and gain a better understanding of your users. Getting all of these capabilities through one SDK means you reduce the overhead of maintaining your app and can focus on shipping your product.
+By integrating PostHog into your app, you’ll be able to track and diagnose errors, roll out and test new features and gain a better understanding of your users. Getting all of these capabilities through one SDK means you reduce the overhead of maintaining your app and **can focus on shipping your product.** .. 
+
 
 For Prodcut Engineers this means:
 

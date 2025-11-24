@@ -2,6 +2,8 @@
 
 Loose mental notes:
 
+Key principles (Value First, No Pressure, Radical Honesty)
+
 Presentation idea for creative sales ideas = create a super simple PostHog game where the Hog is presenting the concepts, instead of a plain / boring slide deck. 
 
 What's in the presentation?
